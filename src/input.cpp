@@ -41,7 +41,7 @@ static go2_input_state_t* prevGamepadState;
 static go2_input_t* input;
 static bool has_triggers = false;
 
-static constexpr go2_input_button_t Hotkey = Go2InputButton_F2;
+static constexpr go2_input_button_t Hotkey = Go2InputButton_F1;
 
 
 void input_gamepad_read()
