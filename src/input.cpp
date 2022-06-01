@@ -215,51 +215,51 @@ int16_t core_input_state(unsigned port, unsigned device, unsigned index, unsigne
                     break;
 
                 case RETRO_DEVICE_ID_JOYPAD_L:
-                    if (has_triggers)
+                    /*if (has_triggers)
                     {
                         return go2_input_state_button_get(gamepadState, Go2InputButton_TopLeft);
                     }
                     else
-                    {
-                        return opt_triggers ? go2_input_state_button_get(gamepadState, Go2InputButton_TopLeft) :
+                    {*/
+                        return opt_triggers ? go2_input_state_button_get(gamepadState, Go2InputButton_TriggerLeft) :
                             go2_input_state_button_get(gamepadState, Go2InputButton_TopLeft);
-                    }
+                    //}
                     break;
 
                 case RETRO_DEVICE_ID_JOYPAD_R:
-                    if (has_triggers)
+                    /*if (has_triggers)
                     {
                         return go2_input_state_button_get(gamepadState, Go2InputButton_TopRight);
                     }
                     else
-                    {
-                        return opt_triggers ? go2_input_state_button_get(gamepadState, Go2InputButton_TopRight) :
+                    {*/
+                        return opt_triggers ? go2_input_state_button_get(gamepadState, Go2InputButton_TriggerRight) :
                             go2_input_state_button_get(gamepadState, Go2InputButton_TopRight);
-                    }
+                    //}
                     break;
 
                 case RETRO_DEVICE_ID_JOYPAD_L2:
-                    if (has_triggers)
+                    /*if (has_triggers)
                     {
                         return go2_input_state_button_get(gamepadState, Go2InputButton_TriggerLeft);
                     }
                     else
-                    {
+                    {*/
                         return opt_triggers ? go2_input_state_button_get(gamepadState, Go2InputButton_TopLeft) :
                             go2_input_state_button_get(gamepadState, Go2InputButton_TriggerLeft);
-                    }
+                    //}
                     break;
 
                 case RETRO_DEVICE_ID_JOYPAD_R2:
-                    if (has_triggers)
+                    /*if (has_triggers)
                     {
                         return go2_input_state_button_get(gamepadState, Go2InputButton_TriggerRight);
                     }
                     else
-                    {
+                    {*/
                         return opt_triggers ? go2_input_state_button_get(gamepadState, Go2InputButton_TopRight) :
                             go2_input_state_button_get(gamepadState, Go2InputButton_TriggerRight);
-                    }
+                    //}
                     break;
 
                 default:
