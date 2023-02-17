@@ -333,7 +333,7 @@ static bool core_environment(unsigned cmd, void* data)
             }
             else if (strcmp(var->key, "reicast_internal_resolution") == 0)
             {
-                var->value = "640x480";
+                var->value = "320x240";
                 return true;
             }            
             else if (strcmp(var->key, "reicast_anisotropic_filtering") == 0)
@@ -790,7 +790,7 @@ int main(int argc, char *argv[])
     int c;
     int option_index = 0;
 
-	while ((c = getopt_long(argc, argv, "s:d:a:b:v:rtn", longopts, &option_index)) != -1)
+	while ((c = getopt_long(argc, argv, "s:d:a:b:v:grtnfc", longopts, &option_index)) != -1)
 	{
 		switch (c)
 		{
@@ -825,6 +825,18 @@ int main(int argc, char *argv[])
             case 'n':
                 Retrorun_UseAnalogStick = true;
                 break;
+
+            /*case 'f':
+                opt_show_fps = true;
+                break;*/
+
+            case 'g':
+                gpio_joypad = true;
+                break;
+
+            /*case 'c':
+                opt_setting_file = optarg;
+                break;*/
 
 			default:
 				printf("Unknown option. '%s'\n", longopts[option_index].name);
